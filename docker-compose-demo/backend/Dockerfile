@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Instalacija potrebnih paketa
-RUN pip install flask psycopg2-binary
+RUN pip install flask psycopg2-binary flask-cors
 
 COPY app.py .
 COPY wait_for_db.py .
