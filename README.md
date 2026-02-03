@@ -61,6 +61,12 @@ project-root/
 ├── db/
 │   └── init/
 │       └── 01_init.sql
+|__ frontend/
+│   ├──src/
+│   ├── public/
+│   ├── package.json
+│   └── Dockerfile
+
 ├── docker-compose.yml
 └── README.md
 ```
@@ -73,9 +79,16 @@ Automatski se inicijalizuje SQL skriptom pri prvom pokretanju (01_init.sql)
 
 ### backend
 Backend servis (Python + Flask)
-Servis sa izloženim REST API endpointi koji se konektuje na PG bazu i prikayuje informacije odatle 
+Servis sa izloženim REST API endpointi koji se konektuje na PG bazu i prikazuje informacije odatle 
+
+
+###frontend
+
+React frontend aplikacija
+Servis prikazuje podatke sa backend REST API-ja (/users) u browseru.
 
 Servisi su povezani putem interne Docker mreže i upravljaju se docker-compose.yml fajlom.
+
 
 ### Pokretanje projekta
 1. Otvoriti terminal u folderu gde se nalazi projekat 
